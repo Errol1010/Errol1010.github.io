@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/Owner/Downloads/bryanconsulting_landing.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bryan Consulting — Pipeline Management for UK Recruitment Agencies</title>
+<link href="./Bryan Consulting — Pipeline Management for UK Recruitment Agencies_files/css2" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f1f3d;
+    --navy-mid: #1a3260;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --cream: #f9f6f0;
+    --cream-dark: #ede9e0;
+    --text: #1a1a2e;
+    --text-mid: #4a4a6a;
+    --white: #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 4rem;
+    background: rgba(249,246,240,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.6rem 1.5rem;
+    border-radius: 2px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--navy-mid); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 4rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background: var(--navy);
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+
+  .hero-bg-accent {
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 40%;
+    height: 4px;
+    background: var(--gold);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 580px;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    line-height: 1.15;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-mid);
+    max-width: 460px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 0.9rem 2rem;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .btn-ghost {
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid var(--navy);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
+
+  /* PROOF BAR */
+  .proof-bar {
+    background: var(--navy);
+    padding: 1.5rem 4rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .proof-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--cream-dark);
+    font-size: 0.88rem;
+  }
+
+  .proof-item::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 500;
+  }
+
+  /* PROBLEM */
+  .section { padding: 6rem 4rem; }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: center;
+  }
+
+  .problem-list { list-style: none; }
+
+  .problem-list li {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--cream-dark);
+    font-size: 0.97rem;
+    color: var(--text-mid);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .problem-list li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .problem-quote {
+    background: var(--navy);
+    padding: 2.5rem;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .problem-quote::before {
+    content: '"';
+    font-family: 'DM Serif Display', serif;
+    font-size: 6rem;
+    color: var(--gold);
+    opacity: 0.3;
+    position: absolute;
+    top: -1rem;
+    left: 1.5rem;
+    line-height: 1;
+  }
+
+  .problem-quote p {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: var(--cream);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .problem-quote cite {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--gold);
+    font-style: normal;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* PRODUCT */
+  .product-section {
+    background: var(--navy);
+    padding: 6rem 4rem;
+    color: var(--cream);
+  }
+
+  .product-section .section-label { color: var(--gold); }
+  .product-section h2 { color: var(--cream); }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .feature-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 2rem;
+    border-radius: 2px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .feature-card:hover {
+    border-color: rgba(201,168,76,0.5);
+    background: rgba(255,255,255,0.08);
+  }
+
+  .feature-number {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    color: var(--gold);
+    opacity: 0.4;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .feature-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-desc {
+    font-size: 0.88rem;
+    color: rgba(249,246,240,0.6);
+    line-height: 1.6;
+  }
+
+  /* PRICING */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 700px;
+  }
+
+  .price-card {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    padding: 2rem;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .price-card.featured {
+    border: 2px solid var(--gold);
+  }
+
+  .price-badge {
+    position: absolute;
+    top: -12px;
+    left: 1.5rem;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 2px;
+  }
+
+  .price-tier {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    margin-bottom: 0.75rem;
+  }
+
+  .price-amount {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.4rem;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--text-mid);
+    margin-bottom: 1.25rem;
+  }
+
+  .price-features {
+    list-style: none;
+    border-top: 1px solid var(--cream-dark);
+    padding-top: 1.25rem;
+  }
+
+  .price-features li {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    padding: 0.35rem 0;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .price-features li::before { content: '✓'; color: var(--gold); flex-shrink: 0; }
+
+  .price-addon {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--cream);
+    border-radius: 2px;
+    font-size: 0.85rem;
+    color: var(--text-mid);
+  }
+
+  .price-addon strong { color: var(--navy); }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--gold);
+    padding: 5rem 4rem;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .cta-section p {
+    color: var(--navy);
+    opacity: 0.75;
+    max-width: 480px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+  }
+
+  .btn-dark {
+    background: var(--navy);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .btn-dark:hover { background: var(--navy-mid); transform: translateY(-1px); }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-initials {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .about-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+  }
+
+  .about-role {
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text {
+    font-size: 0.97rem;
+    color: var(--text-mid);
+    font-weight: 300;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    padding: 2.5rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--cream);
+  }
+
+  .footer-logo span { color: var(--gold); }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .footer-links a {
+    color: rgba(249,246,240,0.5);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-copy {
+    color: rgba(249,246,240,0.3);
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  h1 { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-sub { animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-cta-group { animation: fadeUp 0.6s 0.3s ease both; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    .hero-bg { width: 100%; clip-path: none; opacity: 0.08; }
+    .section { padding: 4rem 1.5rem; }
+    .problem-grid, .product-grid, .pricing-grid, .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .product-section { padding: 4rem 1.5rem; }
+    .cta-section { padding: 4rem 1.5rem; }
+    footer { padding: 2rem 1.5rem; }
+    .proof-bar { padding: 1.5rem; gap: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Bryan<span>Consulting</span></div>
+  <a href="https://calendly.com/errol-eb91/30min" class="nav-cta" target="_blank">Book a call</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-accent"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">For UK recruitment agency founders</p>
+    <h1>Stop losing placements you <em>should</em> win.</h1>
+    <p class="hero-sub">Lead Gen OS gives independent recruitment agency MDs clean, real-time visibility over their BD pipeline and live placements — without expensive CRM software.</p>
+    <div class="hero-cta-group">
+      <a href="https://calendly.com/errol-eb91/30min" class="btn-primary" target="_blank">Book a free 20-minute call</a>
+      <a href="file:///C:/Users/Owner/Downloads/bryanconsulting_landing.html#product" class="btn-ghost">See how it works</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-item">Built specifically for UK recruitment agencies</div>
+  <div class="proof-item">One-time cost — no monthly fees</div>
+  <div class="proof-item">Works in Excel — no new software to learn</div>
+  <div class="proof-item">Up and running in one session</div>
+</div>
+
+<!-- PROBLEM -->
+<section class="section" id="problem">
+  <p class="section-label">The problem</p>
+  <h2>Sound familiar?</h2>
+  <div class="problem-grid">
+    <ul class="problem-list">
+      <li>Your BD tracking spreadsheet is out of date by Tuesday</li>
+      <li>You're paying £200/month for a CRM you only use 20% of</li>
+      <li>You don't know at a glance where every live placement stands</li>
+      <li>Your consultants track activity in their heads — or don't track it at all</li>
+      <li>You're reacting to your pipeline instead of managing it</li>
+    </ul>
+    <div class="problem-quote">
+      <p>Most agency founders I speak to aren't running their pipeline. They're firefighting it.</p>
+      <cite>Errol Bryan, Founder — Bryan Consulting</cite>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT -->
+<section class="product-section" id="product">
+  <p class="section-label">The solution</p>
+  <h2>Lead Gen OS — your pipeline, finally under control.</h2>
+  <p style="color:rgba(249,246,240,0.65); max-width:560px; margin-top:0.5rem; font-weight:300;">An Excel-based pipeline management system designed from the ground up for independent UK recruitment agencies.</p>
+  <div class="product-grid">
+    <div class="feature-card">
+      <div class="feature-number">01</div>
+      <p class="feature-title">BD pipeline visibility</p>
+      <p class="feature-desc">See every active business development conversation in one place — stage, value, next action, owner.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-number">02</div>
+      <p class="feature-title">Live placement tracker</p>
+      <p class="feature-desc">Know exactly where every placement stands at any moment — no chasing consultants for updates.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-number">03</div>
+      <p class="feature-title">Activity dashboard</p>
+      <p class="feature-desc">Track calls, meetings, and submissions across your team. See what's working and where to focus.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-number">04</div>
+      <p class="feature-title">No CRM required</p>
+      <p class="feature-desc">Runs entirely in Excel. No subscriptions, no logins, no training. Your team is up and running in hours.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-number">05</div>
+      <p class="feature-title">Built for UK agencies</p>
+      <p class="feature-desc">Designed around how UK independent recruitment agencies actually work — not generic sales teams.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-number">06</div>
+      <p class="feature-title">One-time investment</p>
+      <p class="feature-desc">Pay once, use forever. No ongoing fees, no per-seat charges, no price hikes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section" id="pricing">
+  <p class="section-label">Pricing</p>
+  <h2>Simple, one-time pricing.</h2>
+  <p style="color:var(--text-mid); max-width:480px;">No subscriptions. No per-user fees. No surprises. Pay once and own it.</p>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <p class="price-tier">Single user</p>
+      <p class="price-amount">£397</p>
+      <p class="price-note">One-time payment</p>
+      <ul class="price-features">
+        <li>Full Lead Gen OS system</li>
+        <li>BD pipeline tracker</li>
+        <li>Live placement dashboard</li>
+        <li>Activity reporting</li>
+        <li>Setup walkthrough call</li>
+      </ul>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">Most popular</div>
+      <p class="price-tier">Team (up to 5 users)</p>
+      <p class="price-amount">£797</p>
+      <p class="price-note">One-time payment</p>
+      <ul class="price-features">
+        <li>Everything in Single User</li>
+        <li>Multi-user configuration</li>
+        <li>Team activity visibility</li>
+        <li>Manager dashboard view</li>
+        <li>Priority onboarding support</li>
+      </ul>
+      <div class="price-addon">
+        <strong>Assurance retainer</strong> — optional add-on at £97/month. Ongoing support, updates and optimisation.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" style="background:var(--cream-dark);" id="about">
+  <div class="about-grid">
+    <div>
+      <div class="about-initials">EB</div>
+      <p class="about-name">Errol Bryan</p>
+      <p class="about-role">Founder, Bryan Consulting</p>
+      <p class="about-text">I built Lead Gen OS because I kept seeing the same problem — talented recruitment agency founders losing control of their pipeline not because they lacked ability, but because they lacked the right tool. I've designed a system that's simple enough to actually use, and powerful enough to make a real difference to your billings.</p>
+    </div>
+    <div>
+      <p class="section-label">Why work with us</p>
+      <h2>Straight talking. No fluff.</h2>
+      <p style="color:var(--text-mid); font-weight:300; margin-bottom:1.5rem;">Bryan Consulting works exclusively with independent UK recruitment agency founders. We don't serve enterprise clients, we don't sell generic tools, and we don't lock you into contracts.</p>
+      <p style="color:var(--text-mid); font-weight:300;">If Lead Gen OS isn't right for you, I'll tell you in the first call. If it is, you'll be up and running faster than you think.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <h2>Ready to take control of your pipeline?</h2>
+  <p>Book a free 20-minute call. No pitch — just an honest look at whether Lead Gen OS fits your agency.</p>
+  <a href="https://calendly.com/errol-eb91/30min" class="btn-dark" target="_blank">Book your free call now</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Bryan<span>Consulting</span></div>
+  <ul class="footer-links">
+    <li><a href="https://linkedin.com/in/errolbryan" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:errol@bryanconsulting.co.uk">Email us</a></li>
+    <li><a href="https://calendly.com/errol-eb91/30min" target="_blank">Book a call</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 Bryan Consulting. All rights reserved. errol@bryanconsulting.co.uk</p>
+</footer>
+
+
+
+</body></html>
