@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0061)file:///C:/Users/Owner/Downloads/bryanconsulting_landing.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bryan Consulting — Pipeline Management for UK Recruitment Agencies</title>
-<link href="./Bryan Consulting — Pipeline Management for UK Recruitment Agencies_files/css2" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -340,90 +340,177 @@
   }
 
   /* PRICING */
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+  .pricing-table-wrap {
     margin-top: 3rem;
-    max-width: 700px;
+    overflow-x: auto;
   }
 
-  .price-card {
-    background: var(--white);
-    border: 1px solid var(--cream-dark);
-    padding: 2rem;
-    border-radius: 2px;
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    min-width: 700px;
+  }
+
+  .pricing-table th {
+    padding: 1.25rem 1rem;
+    text-align: center;
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--cream-dark);
+  }
+
+  .pricing-table th.col-feature {
+    text-align: left;
+    color: var(--text-mid);
+    font-weight: 500;
+    width: 28%;
+  }
+
+  .pricing-table th .tier-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .pricing-table th .tier-price {
+    font-size: 1.4rem;
+    font-family: 'DM Serif Display', serif;
+    color: var(--gold);
+    display: block;
+  }
+
+  .pricing-table th .tier-note {
+    font-size: 0.72rem;
+    color: var(--text-mid);
+    font-weight: 400;
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+  .pricing-table th.col-growth {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 2px 2px 0 0;
     position: relative;
   }
 
-  .price-card.featured {
-    border: 2px solid var(--gold);
-  }
+  .pricing-table th.col-growth .tier-name { color: var(--white); }
+  .pricing-table th.col-growth .tier-note { color: var(--gold-light); }
 
-  .price-badge {
-    position: absolute;
-    top: -12px;
-    left: 1.5rem;
+  .best-so-far {
     background: var(--gold);
     color: var(--navy);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .pricing-table td {
+    padding: 0.7rem 1rem;
+    text-align: center;
+    color: var(--text-mid);
+    border-bottom: 1px solid var(--cream-dark);
+    vertical-align: middle;
+  }
+
+  .pricing-table td.col-feature {
+    text-align: left;
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  .pricing-table td.col-growth {
+    background: rgba(15,31,61,0.04);
+  }
+
+  .pricing-table tr.section-header td {
+    background: var(--cream-dark);
     font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 2px;
-  }
-
-  .price-tier {
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text-mid);
-    margin-bottom: 0.75rem;
-  }
-
-  .price-amount {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.4rem;
     color: var(--navy);
-    line-height: 1;
-    margin-bottom: 0.25rem;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    border: none;
   }
 
-  .price-note {
+  .check { color: var(--gold); font-size: 1rem; }
+  .dash { color: var(--cream-dark); font-size: 1.2rem; }
+
+  .pricing-table td small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-mid);
+    margin-top: 0.15rem;
+  }
+
+  .assurance-bar {
+    margin-top: 2.5rem;
+    background: var(--cream-dark);
+    border-radius: 2px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .assurance-bar strong {
+    color: var(--navy);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .assurance-bar p {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    margin: 0;
+  }
+
+  .assurance-tiers {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+  }
+
+  .assurance-tier {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: 2px;
+    padding: 0.6rem 1rem;
     font-size: 0.8rem;
     color: var(--text-mid);
-    margin-bottom: 1.25rem;
+    flex: 1;
+    min-width: 160px;
   }
 
-  .price-features {
-    list-style: none;
-    border-top: 1px solid var(--cream-dark);
-    padding-top: 1.25rem;
+  .assurance-tier.included {
+    background: var(--navy);
+    color: var(--white);
+    border-color: var(--navy);
   }
 
-  .price-features li {
-    font-size: 0.88rem;
-    color: var(--text-mid);
-    padding: 0.35rem 0;
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
+  .assurance-tier span {
+    display: block;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.2rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
-  .price-features li::before { content: '✓'; color: var(--gold); flex-shrink: 0; }
-
-  .price-addon {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: var(--cream);
-    border-radius: 2px;
-    font-size: 0.85rem;
-    color: var(--text-mid);
-  }
-
-  .price-addon strong { color: var(--navy); }
+  .assurance-tier.included span { color: var(--gold); }
 
   /* CTA SECTION */
   .cta-section {
@@ -586,7 +673,7 @@
     <p class="hero-sub">Lead Gen OS gives independent recruitment agency MDs clean, real-time visibility over their BD pipeline and live placements — without expensive CRM software.</p>
     <div class="hero-cta-group">
       <a href="https://calendly.com/errol-eb91/30min" class="btn-primary" target="_blank">Book a free 20-minute call</a>
-      <a href="file:///C:/Users/Owner/Downloads/bryanconsulting_landing.html#product" class="btn-ghost">See how it works</a>
+      <a href="#product" class="btn-ghost">See how it works</a>
     </div>
   </div>
 </section>
@@ -659,36 +746,186 @@
 
 <!-- PRICING -->
 <section class="section" id="pricing">
-  <p class="section-label">Pricing</p>
-  <h2>Simple, one-time pricing.</h2>
-  <p style="color:var(--text-mid); max-width:480px;">No subscriptions. No per-user fees. No surprises. Pay once and own it.</p>
-  <div class="pricing-grid">
-    <div class="price-card">
-      <p class="price-tier">Single user</p>
-      <p class="price-amount">£397</p>
-      <p class="price-note">One-time payment</p>
-      <ul class="price-features">
-        <li>Full Lead Gen OS system</li>
-        <li>BD pipeline tracker</li>
-        <li>Live placement dashboard</li>
-        <li>Activity reporting</li>
-        <li>Setup walkthrough call</li>
-      </ul>
+  <p class="section-label">Investment</p>
+  <h2>Everything included at every level — each tier builds on the last.</h2>
+  <p style="color:var(--text-mid); max-width:560px;">No subscriptions. No per-user fees. No surprises. Pay once and own it — or let us run it for you.</p>
+
+  <div class="pricing-table-wrap">
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th class="col-feature">What's included</th>
+          <th>
+            <span class="tier-name">Starter</span>
+            <span class="tier-price">£397</span>
+            <span class="tier-note">one-time</span>
+          </th>
+          <th>
+            <span class="tier-name">Professional</span>
+            <span class="tier-price">£797</span>
+            <span class="tier-note">one-time · Most popular</span>
+          </th>
+          <th>
+            <span class="tier-name">Agency Build</span>
+            <span class="tier-price">£1,500</span>
+            <span class="tier-note">one-time · then self-managed</span>
+          </th>
+          <th class="col-growth">
+            <span class="best-so-far">Best so far</span>
+            <span class="tier-name">Growth Partner</span>
+            <span class="tier-price">£750/mo</span>
+            <span class="tier-note">fully managed</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-header"><td colspan="5">Core Product</td></tr>
+        <tr>
+          <td class="col-feature">Fully configured Lead Gen OS file</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Complete User Guide</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Licence Agreement</td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+
+        <tr class="section-header"><td colspan="5">Setup &amp; Onboarding</td></tr>
+        <tr>
+          <td class="col-feature">Email support</td>
+          <td>30 days<small>&amp; wk day 30</small></td>
+          <td>60 days<small>&amp; wk day 60</small></td>
+          <td>90 days<small>&amp; wk day 90</small></td>
+          <td class="col-growth">Unlimited<small>always on</small></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Onboarding call — custom setup</td>
+          <td><span class="dash">—</span></td>
+          <td>✓ 45 min</td>
+          <td>✓ 90 min</td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Day-30 check-in call</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+
+        <tr class="section-header"><td colspan="5">Customisation &amp; Team</td></tr>
+        <tr>
+          <td class="col-feature">Bespoke file build for your workflow</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="check">✓</span></td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Custom stage names &amp; scoring thresholds</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="check">✓</span></td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Full-team onboarding session</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="check">✓</span></td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Quick Reference Card for consultants</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="check">✓</span></td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Active optimisation period</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td>14 days<small>&amp; one-time only</small></td>
+          <td class="col-growth">Monthly<small>every quarter</small></td>
+        </tr>
+
+        <tr class="section-header"><td colspan="5">Growth Partner Exclusives — Ongoing Managed Service</td></tr>
+        <tr>
+          <td class="col-feature">Pipeline health check</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td class="col-growth">Monthly<small>no flag dead leads for you</small></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Strategy &amp; market adaptation call</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td class="col-growth">Monthly<small>your system evolves with you</small></td>
+        </tr>
+        <tr>
+          <td class="col-feature">Quarterly customisation build</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td class="col-growth">1 free change per quarter</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Benchmarking vs. client network</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td class="col-growth">See how you compare</td>
+        </tr>
+        <tr>
+          <td class="col-feature">All future updates included</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+          <td class="col-growth"><span class="check">✓</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="margin-top:1.25rem; font-size:0.82rem; color:var(--text-mid);"><strong style="color:var(--navy);">One recovered deal covers the fee.</strong> Growth Partner clients typically recoup their monthly investment within the first two weeks.</p>
+
+  <!-- Assurance add-on -->
+  <div class="assurance-bar">
+    <div>
+      <strong>Add-on: Assurance — £97/month</strong>
+      <p>Issues fixed within 48 hours. All future upgrades included automatically.</p>
     </div>
-    <div class="price-card featured">
-      <div class="price-badge">Most popular</div>
-      <p class="price-tier">Team (up to 5 users)</p>
-      <p class="price-amount">£797</p>
-      <p class="price-note">One-time payment</p>
-      <ul class="price-features">
-        <li>Everything in Single User</li>
-        <li>Multi-user configuration</li>
-        <li>Team activity visibility</li>
-        <li>Manager dashboard view</li>
-        <li>Priority onboarding support</li>
-      </ul>
-      <div class="price-addon">
-        <strong>Assurance retainer</strong> — optional add-on at £97/month. Ongoing support, updates and optimisation.
+    <div class="assurance-tiers">
+      <div class="assurance-tier">
+        <span>Starter</span>
+        Recommended — cover after 30-day support ends
+      </div>
+      <div class="assurance-tier">
+        <span>Professional</span>
+        Optional: kicks in after 60-day support
+      </div>
+      <div class="assurance-tier">
+        <span>Agency Build</span>
+        Optional: available after 90-day support
+      </div>
+      <div class="assurance-tier included">
+        <span>Growth Partner</span>
+        Already included — no add-on needed
       </div>
     </div>
   </div>
@@ -730,6 +967,5 @@
   <p class="footer-copy">© 2026 Bryan Consulting. All rights reserved. errol@bryanconsulting.co.uk</p>
 </footer>
 
-
-
-</body></html>
+</body>
+</html>
